@@ -10,3 +10,4 @@ streamlit==1.32.2
 xlsxwriter
 openpyxl
 streamlit-extras
+msal
