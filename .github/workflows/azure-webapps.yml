@@ -1,10 +1,10 @@
+# File: .github/workflows/azure-webapps.yml
 name: Deploy to Azure Web App
 
 on:
   push:
     branches:
-      - main  # or change to your default branch
-  workflow_dispatch:
+      - main  # Trigger on push to main branch
 
 jobs:
   build-and-deploy:
@@ -13,6 +13,11 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+
+    - name: Log in to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: Setup Python
       uses: actions/setup-python@v4
@@ -28,5 +33,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: P-AIM-Dashboard
-        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        slot-name: Production
         package: .

@@ -66,3 +66,17 @@ st.markdown("""
         © 2025 Automation Toolkit | Bosch Internal Tool | Feedback or ideas? Reach out to Shashank Joshi (GS/ORS3-IN)
     </div>
 """, unsafe_allow_html=True)
+
+# Add floating chatbot icon (redirect link)
+chatbot_url = "https://gsaccessmanagement.azurewebsites.net "  # Replace with actual URL
+
+chatbot_icon_html = f"""
+    <div style="position: fixed; bottom: 80px; right: 30px; z-index: 9999;">
+        <a href="{chatbot_url}" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png"
+                 alt="Chatbot" title="Ask our Chatbot"
+                 style="width: 60px; height: 60px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        </a>
+    </div>
+"""
+st.markdown(chatbot_icon_html, unsafe_allow_html=True)
