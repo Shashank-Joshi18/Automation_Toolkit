@@ -10,4 +10,8 @@ streamlit==1.32.2
 xlsxwriter
 openpyxl
 streamlit-extras
+<<<<<<< HEAD
 gunicorn
+=======
+
+>>>>>>> 3b70aee4d98a1c38dfc3e26412eac806e40a51ee

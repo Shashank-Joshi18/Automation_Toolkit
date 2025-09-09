@@ -79,4 +79,8 @@ chatbot_icon_html = f"""
         </a>
     </div>
 """
+<<<<<<< HEAD
 st.markdown(chatbot_icon_html, unsafe_allow_html=True)
+=======
+st.markdown(chatbot_icon_html, unsafe_allow_html=True)
+>>>>>>> 3b70aee4d98a1c38dfc3e26412eac806e40a51ee
